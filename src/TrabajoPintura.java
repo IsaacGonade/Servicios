@@ -46,4 +46,14 @@ public class TrabajoPintura extends Servicio{
         }
     }
 
+    @Override
+    public String toString() {
+        return "TrabajoPintura{" +
+                "Superficie=" + Superficie +
+                ", PrecioPintura=" + PrecioPintura +
+                ", Trabajador='" + Trabajador + '\'' +
+                ", FechaInicio=" + FechaInicio +
+                ", Cliente='" + Cliente + '\'' +
+                '}';
+    }
 }
