@@ -1,9 +1,12 @@
-public class TrabajoPintura {
+import java.time.LocalDate;
+
+public class TrabajoPintura extends Servicio{
     double Superficie;
 
     double PrecioPintura;
 
-    public TrabajoPintura(double superficie, double precioPintura) {
+    public TrabajoPintura(String trabajador, LocalDate fechaInicio, String cliente, double superficie, double precioPintura) {
+        super(trabajador, fechaInicio, cliente);
         Superficie = superficie;
         PrecioPintura = precioPintura;
     }
@@ -43,20 +46,4 @@ public class TrabajoPintura {
         }
     }
 
-    @Override
-    public String detalleServicio() {
-        String cadena = "";
-
-        cadena += "TRABAJO DE PINTURA\n";
-        cadena += "Cliente: "+this.Cliente+"\n";
-        cadena += "Fecha de Inicio: "+this.FechaInicio+"\n";
-        cadena += "------------------\n";
-        cadena += "Pintor: "+this.Trabajador+"\n";
-        cadena += "Coste Material: "+coste_material+"\n";
-        cadena += "Coste Mano Obra: "+coste_mano_obra+"\n";
-        cadena += "Coste Adicional: "+costeAdicional+"\n";
-        cadena += "TOTAL: "+coste_total+"\n";
-        cadena += "------------------\n";
-        return cadena;
-    }
 }

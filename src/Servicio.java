@@ -31,7 +31,6 @@ public abstract class Servicio {
     public void setFechaInicio(LocalDate fechaInicio) {
         FechaInicio = fechaInicio;
     }
-
     public String getCliente() {
         return Cliente;
     }
@@ -39,6 +38,9 @@ public abstract class Servicio {
     public void setCliente(String cliente) {
         Cliente = cliente;
     }
+
+
+
 
     public abstract double costeMaterial();
 
